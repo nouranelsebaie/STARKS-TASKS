@@ -10,7 +10,7 @@ void main(void)
 		fflush(stdin);
 	printf("enter the second number :\n");
 		scanf("%d",&y);
-		fflush(stdin);
+		
 	int add = x+y;
 	int sub = x-y;
 	int mul = x*y;
