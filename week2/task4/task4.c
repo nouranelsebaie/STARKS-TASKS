@@ -3,22 +3,26 @@
 int main() {
     int V, A, B, C;
     scanf("%d %d %d %d", &V, &A, &B, &C);
-    int currentPerson = 0;
-    while (V > 0) {
-        if (currentPerson == 0)
-            V -= A;
-        else if (currentPerson == 1)
-            V -= B;
-        else
-            V -= C;
-        currentPerson = (currentPerson + 1) % 3;
+    while (1) {
+             V -= A;
+        if (V<0)
+        {
+             printf("F\n");
+             break;
+        }
+        V -= B;
+        if (V<0)
+        {
+             printf("M\n");
+             break;
+        }
+         V -= C;
+        if (V<0)
+        {
+             printf("T\n");
+             break;
+        }
     }
-    if (currentPerson == 0) {
-        printf("F\n");
-    } else if (currentPerson == 1) {
-        printf("M\n");
-    } else {
-        printf("T\n");
-    }
+
     return 0;
 }
