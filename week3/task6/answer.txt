@@ -1,0 +1,29 @@
+foo(513, 2)
+= (513 % 2) + foo(513/2, 2)
+= 1 + foo(256, 2)
+
+foo(256, 2)
+= (256 % 2) + foo(256/2, 2)
+= 0 + foo(128, 2)
+
+foo(128, 2)
+= (128 % 2) + foo(128/2, 2)
+= 0 + foo(64, 2)
+
+...
+
+foo(2, 2)
+= (2 % 2) + foo(2/2, 2)
+= 0 + foo(1, 2)
+
+foo(1, 2)
+= (1 % 2) + foo(1/2, 2)
+= 1 + foo(0, 2)
+
+foo(0, 2)
+= 0
+
+
+So, the return value of foo(513, 2) is 1.
+
+Therefore, when called as foo(513, 2), the foo function will return 1.
