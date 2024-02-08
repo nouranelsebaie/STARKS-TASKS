@@ -4,5 +4,5 @@ the output is
 6
 12
 7
-7 
-because this is a local variable in the main all changes can happen in the main only so it will be 6 then 12 then 7 and will stay at 7 after main
+6
+because int z=5; is visible to the inner block so the second 5 will be printed and z will declared to z=6 so the outer z will restor 6 then after the inner block end the last print will be 6
